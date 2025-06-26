@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master's in Electric Vehicle Engineering | Academic City University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <img src="./assets/Academic-City.png" alt="Academic City University">
+          <span> Academic City University</span>
+        </div>
+        <div class="nav-links">
+          <a href="#contact">Contact</a>
+          <button class="nav-cta" onclick="openLeadForm()">Apply Now</button>
+        </div>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sticky Lead Form -->
+    <div id="sticky-lead-form" class="sticky-lead-form">
+      <div class="lead-form-container">
+        <button class="lead-form-toggle" id="lead-form-toggle">
+          <span class="form-icon">📋</span>
+          <span class="form-text">Get Program Info</span>
+        </button>
+        <div class="lead-form-wrapper" id="lead-form-wrapper">
+          <form class="lead-form" id="lead-form">
+            <div class="form-header">
+              <h3>Get Program Information</h3>
+              <button type="button" class="close-form" id="close-form">×</button>
+            </div>
+            <div class="form-body">
+              <input type="text" name="name" placeholder="Full Name *" required>
+              <input type="email" name="email" placeholder="Email Address *" required>
+              <input type="tel" name="phone" placeholder="Phone Number *" required>
+              <select name="interest" required>
+                <option value="">Area of Interest *</option>
+                <option value="ev-engineering">Electric Vehicle Engineering</option>
+                <option value="battery-systems">Battery Systems & Technology</option>
+                <option value="autonomous-vehicles">Autonomous Vehicle Systems</option>
+                <option value="sustainable-mobility">Sustainable Mobility Solutions</option>
+                <option value="charging-infrastructure">Charging Infrastructure</option>
+              </select>
+              <button type="submit" class="form-submit-btn">Get Information</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-badge">Bachelor’s degree program</div>
+          <h1>BSc of <span class="highlight">Electric Vehicle Engineering</span></h1>
+          <p class="hero-subtitle">Lead the future of sustainable transportation with Ghana's most comprehensive EV engineering program. Master cutting-edge technologies in electric powertrains, battery systems, and autonomous vehicle development.</p>
+          
+          <div class="hero-features">
+            <div class="feature-item">
+              <span class="feature-icon"></span>
+              <span>Advanced EV Technologies</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon"></span>
+              <span>Battery Management Systems</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon"></span>
+              <span>Autonomous Vehicle AI</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <button class="cta-primary" onclick="openLeadForm()">Apply for Bachelor's Program</button>
+            <button class="cta-secondary" onclick="scrollToSection('program')">Explore Curriculum</button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Years Duration</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Job Placement Rate</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">₵75K</span>
+              <span class="stat-label">Scholarships Available</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="hero-image-container">
+            <img src="https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Electric Vehicle Engineering" class="hero-image">
+            <div class="hero-video-badge">
+              <button class="play-button" onclick="playIntroVideo()">
+                <span class="play-icon"></span>
+                <span>Watch Program Overview</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Highlights -->
+    <section id="program" class="program-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Bachelor's Program Highlights</h2>
+          <p class="section-subtitle">Comprehensive curriculum designed for the future of electric mobility</p>
+        </div>
+
+        <div class="program-overview">
+          <div class="program-card main-card">
+            <div class="card-header">
+              <h3>Bachelor of Science in Electric Vehicle Engineering</h3>
+              <div class="program-duration">4 Years • Full-time</div>
+            </div>
+            <div class="card-content">
+              <div class="program-details">
+                <div class="detail-item">
+                  <strong>Start Dates:</strong> September 2025
+                </div>
+                <div class="detail-item">
+                  <strong>Format:</strong> On-campus with industry placements
+                </div>
+                <div class="detail-item">
+                  <strong>Accreditation:</strong> Ghana Tertiary Education Commission
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="curriculum-grid">
+          <div class="curriculum-card">
+            <div class="curriculum-icon"></div>
+            <h3>Core Modules</h3>
+            <ul class="module-list">
+              <li>Electric Powertrain Design & Analysis</li>
+              <li>Advanced Battery Technologies</li>
+              <li>Motor Control & Power Electronics</li>
+              <li>Vehicle Dynamics & Performance</li>
+              <li>Charging Infrastructure Systems</li>
+              <li>Autonomous Vehicle Technologies</li>
+            </ul>
+          </div>
+
+          <div class="curriculum-card">
+            <div class="curriculum-icon"></div>
+            <h3>Specialized Labs</h3>
+            <ul class="module-list">
+              <li>EV Powertrain Testing Laboratory</li>
+              <li>Battery Research & Development Lab</li>
+              <li>Vehicle Simulation Center</li>
+              <li>Autonomous Systems Lab</li>
+              <li>Charging Technology Lab</li>
+              <li>Materials Science Laboratory</li>
+            </ul>
+          </div>
+
+          <div class="curriculum-card">
+            <div class="curriculum-icon"></div>
+            <h3>Industry Integration</h3>
+            <ul class="module-list">
+              <li>6-month Industry Placement</li>
+              <li>Real-world Project Assignments</li>
+              <li>Guest Lectures from Industry Experts</li>
+              <li>Startup Incubation Program</li>
+              <li>Patent Development Support</li>
+              <li>Industry Mentorship Program</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Academic City -->
+    <section id="why-acity" class="why-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Academic City University?</h2>
+          <p class="section-subtitle">Ghana's leading institution for advanced engineering education</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon"></div>
+            <h3>World-Class Faculty</h3>
+            <p>Learn from internationally recognized experts in electric vehicle technology, with faculty holding PhDs from top global universities and extensive industry experience.</p>
+            <div class="faculty-highlights">
+              <div class="faculty-item">
+                <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Dr. Sarah Johnson">
+                <div class="faculty-info">
+                  <strong>Dr. Sarah Johnson</strong>
+                  <span>Former Tesla Senior Engineer</span>
+                </div>
+              </div>
+              <div class="faculty-item">
+                <img src="https://images.pexels.com/photos/8197544/pexels-photo-8197544.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Prof. Michael Chen">
+                <div class="faculty-info">
+                  <strong>Prof. Michael Chen</strong>
+                  <span>Battery Technology Expert</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon"></div>
+            <h3>State-of-the-Art Facilities</h3>
+            <p>₵15M investment in cutting-edge laboratories and equipment, including Africa's most advanced EV testing facilities and simulation centers.</p>
+            <div class="facility-image">
+              <img src="https://images.pexels.com/photos/8183965/pexels-photo-8183965.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Modern EV Laboratory">
+            </div>
+            <div class="facility-stats">
+              <div class="facility-stat">
+                <strong>3</strong> Specialized Labs
+              </div>
+              <div class="facility-stat">
+                <strong>50+</strong> Testing Equipment
+              </div>
+            </div>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon"></div>
+            <h3>Industry Partnerships</h3>
+            <p>Strong collaborations with leading automotive companies, providing students with internships, research opportunities, and direct pathways to employment.</p>
+            <div class="partners-grid">
+              <div class="partner-logo">Tesla</div>
+              <div class="partner-logo">BMW Group</div>
+              <div class="partner-logo">Volkswagen</div>
+              <div class="partner-logo">BYD</div>
+              <div class="partner-logo">Nissan</div>
+              <div class="partner-logo">Siemens</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Outcomes -->
+    <section id="careers" class="careers-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Career Outcomes & Opportunities</h2>
+          <p class="section-subtitle">Graduate into high-demand roles in the rapidly expanding EV industry</p>
+        </div>
+
+        <div class="career-stats">
+          <div class="career-stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Employment Rate</span>
+          </div>
+          <div class="career-stat">
+            <span class="stat-number">₵180K</span>
+            <span class="stat-label">Average Starting Salary</span>
+          </div>
+          <div class="career-stat">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Months to Employment</span>
+          </div>
+          <div class="career-stat">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Hiring Partners</span>
+          </div>
+        </div>
+
+        <div class="careers-grid">
+          <div class="career-card">
+            <div class="career-header">
+              <h3>Electric Vehicle Design Engineer</h3>
+              <span class="salary-range">₵150,000 - ₵220,000/year</span>
+            </div>
+            <p class="career-description">Design and develop next-generation electric vehicles, focusing on powertrain integration, vehicle architecture, and performance optimization.</p>
+            <div class="career-skills">
+              <span class="skill-tag">CAD Design</span>
+              <span class="skill-tag">Powertrain Systems</span>
+              <span class="skill-tag">Vehicle Dynamics</span>
+            </div>
+            <div class="career-companies">
+              <strong>Hiring Companies:</strong> Tesla, BMW, Volkswagen, BYD
+            </div>
+          </div>
+
+          <div class="career-card">
+            <div class="career-header">
+              <h3>Battery Systems Engineer</h3>
+              <span class="salary-range">₵140,000 - ₵200,000/year</span>
+            </div>
+            <p class="career-description">Develop advanced battery management systems, energy storage solutions, and charging technologies for electric vehicles and grid applications.</p>
+            <div class="career-skills">
+              <span class="skill-tag">Battery Chemistry</span>
+              <span class="skill-tag">BMS Design</span>
+              <span class="skill-tag">Thermal Management</span>
+            </div>
+            <div class="career-companies">
+              <strong>Hiring Companies:</strong> CATL, Panasonic, Samsung SDI, LG Energy
+            </div>
+          </div>
+
+          <div class="career-card">
+            <div class="career-header">
+              <h3>Autonomous Vehicle Engineer</h3>
+              <span class="salary-range">₵180,000 - ₵280,000/year</span>
+            </div>
+            <p class="career-description">Lead development of autonomous driving systems, sensor integration, and AI algorithms for smart mobility solutions.</p>
+            <div class="career-skills">
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">Sensor Fusion</span>
+              <span class="skill-tag">Control Systems</span>
+            </div>
+            <div class="career-companies">
+              <strong>Hiring Companies:</strong> Waymo, Cruise, Aurora, Argo AI
+            </div>
+          </div>
+
+          <div class="career-card">
+            <div class="career-header">
+              <h3>Sustainable Mobility Consultant</h3>
+              <span class="salary-range">₵160,000 - ₵240,000/year</span>
+            </div>
+            <p class="career-description">Advise organizations on sustainable transportation strategies, policy development, and clean mobility implementation.</p>
+            <div class="career-skills">
+              <span class="skill-tag">Policy Analysis</span>
+              <span class="skill-tag">Sustainability</span>
+              <span class="skill-tag">Project Management</span>
+            </div>
+            <div class="career-companies">
+              <strong>Hiring Companies:</strong> McKinsey, Deloitte, Government Agencies
+            </div>
+          </div>
+
+          <div class="career-card">
+            <div class="career-header">
+              <h3>Charging Infrastructure Specialist</h3>
+              <span class="salary-range">₵130,000 - ₵190,000/year</span>
+            </div>
+            <p class="career-description">Design and implement EV charging networks, focusing on grid integration, fast charging technologies, and smart charging solutions.</p>
+            <div class="career-skills">
+              <span class="skill-tag">Power Electronics</span>
+              <span class="skill-tag">Grid Integration</span>
+              <span class="skill-tag">Network Planning</span>
+            </div>
+            <div class="career-companies">
+              <strong>Hiring Companies:</strong> ChargePoint, EVgo, Shell, BP Pulse
+            </div>
+          </div>
+
+          <div class="career-card">
+            <div class="career-header">
+              <h3>EV Startup Founder</h3>
+              <span class="salary-range">Equity + Potential High Returns</span>
+            </div>
+            <p class="career-description">Launch your own electric vehicle or mobility technology company with support from our entrepreneurship program and investor network.</p>
+            <div class="career-skills">
+              <span class="skill-tag">Entrepreneurship</span>
+              <span class="skill-tag">Innovation</span>
+              <span class="skill-tag">Business Development</span>
+            </div>
+            <div class="career-companies">
+              <strong>Support Available:</strong> Incubator, Funding, Mentorship
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faqs" class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-subtitle">Get answers to common questions about our Master's program</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              What are the admission requirements for the Master's program?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Applicants need a Bachelor's degree in Engineering, Physics, or related field with minimum 2.5 GPA. Strong background in mathematics, physics, and basic programming is required. IELTS 6.5 or equivalent for international students.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How long is the Master's program and what are the study options?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The program is 18 months full-time or 24 months part-time. We offer flexible scheduling with evening and weekend classes for working professionals, plus online components for certain modules.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What scholarships and financial aid are available?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We offer merit-based scholarships up to ₵75,000, industry sponsorships, research assistantships, and flexible payment plans. Over 60% of students receive some form of financial assistance.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Are there guaranteed internship and job placement opportunities?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, all students complete a 6-month industry placement with our partner companies. Our career services team provides job placement support with a 98% employment rate within 6 months of graduation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What makes this program different from other engineering programs?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our program is specifically designed for the EV industry with cutting-edge labs, industry partnerships, and practical experience. Students work on real projects with companies like Tesla, BMW, and local startups.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Can international students apply and what support is provided?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we welcome international students and provide visa support, accommodation assistance, orientation programs, and ongoing academic and personal support throughout the program.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <h2>Ready to Start Your EV Engineering Journey?</h2>
+            <p class="contact-subtitle">Join the next generation of electric vehicle engineers and shape the future of sustainable transportation.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">
+                  <strong>Phone</strong>
+                  <span>+233 30 123 4567</span>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-text">
+                  <strong>Email</strong>
+                  <span>ev-admissions@acity.edu.gh</span>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                  <strong>Address</strong>
+                  <span>Academic City University<br>East Legon, Accra, Ghana</span>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">⏰</div>
+                <div class="contact-text">
+                  <strong>Office Hours</strong>
+                  <span>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <button class="cta-primary" onclick="openLeadForm()">Apply Now</button>
+              <button class="cta-secondary" onclick="scheduleVisit()">Schedule Campus Visit</button>
+            </div>
+          </div>
+
+          <div class="contact-form-section">
+            <form class="contact-form" id="contact-form">
+              <h3>Get Detailed Program Information</h3>
+              <div class="form-row">
+                <input type="text" name="firstName" placeholder="First Name *" required>
+                <input type="text" name="lastName" placeholder="Last Name *" required>
+              </div>
+              <div class="form-row">
+                <input type="email" name="email" placeholder="Email Address *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+              </div>
+              <select name="program" required>
+                <option value="">Select Program Interest *</option>
+                <option value="masters-ev">Master's in Electric Vehicle Engineering</option>
+                <option value="certificate-battery">Battery Technology Certificate</option>
+                <option value="certificate-autonomous">Autonomous Systems Certificate</option>
+                <option value="executive-program">Executive Education Program</option>
+              </select>
+              <select name="startDate">
+                <option value="">Preferred Start Date</option>
+                <option value="sep-2024">September 2024</option>
+                <option value="jan-2025">January 2025</option>
+                <option value="may-2025">May 2025</option>
+                <option value="sep-2025">September 2025</option>
+              </select>
+              <textarea name="message" placeholder="Additional Questions or Comments" rows="4"></textarea>
+              <button type="submit" class="form-submit-btn">Send Information Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Academic City University</h4>
+            <p>Leading Ghana's transition to sustainable transportation through world-class education and research in electric vehicle engineering.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#program">Program Details</a></li>
+              <li><a href="#why-acity">Why Choose ACU</a></li>
+              <li><a href="#careers">Career Outcomes</a></li>
+              <li><a href="#faqs">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <ul>
+              <li>+233 30 123 4567</li>
+              <li>ev-admissions@acity.edu.gh</li>
+              <li>East Legon, Accra, Ghana</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Academic City University. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
